@@ -1,0 +1,41 @@
+/* @import url('http://example.com/example_style.css'); */
+
+/***********************************************/
+/* CSS @imports must be at the top of the file */
+/* Add them above this section                 */
+/***********************************************/
+
+/*****************************************/
+/* Start your style declarations here    */
+/*****************************************/
+ul{
+  gap: 10px;
+  margin: 50px 0;
+}
+li{
+  min-height: 270px;
+  padding: 20px;
+  box-shadow: 0 0 2px #00000042;
+  transition: all 0.2s ease;
+}
+li:hover{
+  transform:translateY(-4px);
+  box-shadow: 0 0 5px #00000042;
+
+}
+
+input[type="text"]{
+  background: #ffff !important;
+}
+.form_container{
+  padding: 20px 0;
+}
+
+.email{
+  display: block;
+  font-family: monospace;
+  color: blue;
+  font-size: 16px;
+  margin: 12px 0;
+}
+

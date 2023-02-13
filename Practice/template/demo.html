@@ -1,0 +1,60 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+-->
+<!doctype html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	{% if content.html_title %}<title>{{ content.html_title }}</title>{% endif %}
+	<meta name="description" content="{{ content.meta_description }}">
+	{{ standard_header_includes }}
+	{{ require_css(get_asset_url(".././styles/global.css")) }}
+	{{ require_css(get_asset_url(".././styles/stylesDemo.css")) }}
+
+  </head>
+  <body>
+	{% set languages = ["HTML", "CSS", "Javascript", "Python", "Ruby", "PHP", "Java", "GO", "Rust", "this is from demo", "This is live"] %}
+	{% set blogs = [
+  {
+    "postId": 1,
+    "id": 3,
+    "name": "odio adipisci rerum aut animi",
+    "email": "Nikita@garfield.biz",
+    "body": "quia molestiae reprehenderit quasi aspernatur\naut expedita occaecati aliquam eveniet laudantium\nomnis quibusdam delectus saepe quia accusamus maiores nam est\ncum et ducimus et vero voluptates excepturi deleniti ratione"
+  },
+  {
+    "postId": 1,
+    "id": 4,
+    "name": "alias odio sit",
+    "email": "Lew@alysha.tv",
+    "body": "non et atque\noccaecati deserunt quas accusantium unde odit nobis qui voluptatem\nquia voluptas consequuntur itaque dolor\net qui rerum deleniti ut occaecati"
+  },
+  {
+    "postId": 1,
+    "id": 5,
+    "name": "vero eaque aliquid doloribus et culpa",
+    "email": "Hayden@althea.biz",
+    "body": "harum non quasi et ratione\ntempore iure ex voluptates in ratione\nharum architecto fugit inventore cupiditate\nvoluptates magni quo et"
+  }
+] %}
+
+	<section class="container">
+	  <!--  >>> BLOG LISTING <<< -->
+	  <ul class="grid_colm_3">
+		{% for blog in blogs %}
+		<li class="rounded_md">
+		  <div>
+			<h2 class="fw_800 uppercase"> {{blog.name}} </h2>
+			<span class="email">{{blog.email}}</span>
+			<p>
+			  {{blog.body}}
+			</p>
+		  </div>
+		</li>
+		{% endfor %}
+	  </ul>
+	</section>
+	{{ standard_footer_includes }}
+  </body>
+</html>

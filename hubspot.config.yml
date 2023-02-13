@@ -1,0 +1,16 @@
+defaultPortal: hubspot-test
+portals:
+  - name: hubspot-test
+    portalId: 23989263
+    authType: personalaccesskey
+    auth:
+      tokenInfo:
+        accessToken: >-
+          COPS4MrkMBILAAUAAAAAAEwAQAIYj5i4CyDlw9cXKO7pDDIUij-fZWeht7gwQfsd6gfqlfGQU6w6JgAABEEAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAPABAAABEQhTehmjhjggm9DQ3cb6rsLL5TYClrkoDbmExUgBaAA
+        expiresAt: '2023-02-13T05:55:59.972Z'
+    personalAccessKey: >-
+      CiQyNTNkYmZlMy03YzVlLTQ2ZjYtYmFhOS0xYTkwMmMyNmRkMDIQj5i4Cxjlw9cXKhkABeaRgvPqeR3PwLdlc4ldBEBOERCBRAkhSgNuYTE
+    sandboxAccountType: null
+    parentAccountId: null
+- name: HubSpot CMS Deploy
+  uses: HubSpot/hubspot-cms-deploy-action@v1.6
